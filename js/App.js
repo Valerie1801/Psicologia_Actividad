@@ -60,14 +60,17 @@ function ValidarLogin() {
     listaUsers.forEach(function (userLogin) {
 
         if (userLogin.correo == usuariomail && userLogin.password == password) {
-            console.log("El usuario es de Tipo " + userLogin.tipoUsuario);
+            console.log("El usuario es de Tipo " + userLogin.tipoUsuario + userLogin.correo);
             if (userLogin.tipoUsuario == 'admin') {
                 document.location.href = "registro_Per.html";
-                alert("Bienvenido Sr(a) " + userLogin.nombre);
+                alert("Bienvenido Sr(a) " + userLogin.nombre+""+userLogin.apellido);
             } else if (userLogin.tipoUsuario == 'user') {
                 document.location.href = "registro_Pac.html";
+                alert("Bienvenido Sr(a) " + userLogin.nombre+""+userLogin.apellido);
             }
         }
+
+        alert();
 
     })
 }
