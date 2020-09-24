@@ -1,4 +1,3 @@
-
 // validar el acceso de usuarios
 function ValidarLogin() {
 
@@ -33,11 +32,11 @@ function ValidarLogin() {
 
 function ValidarEmpleado(listaUsers, cedula) {
     let valor = 0;
-   console.log(listaUsers)
+    console.log(listaUsers)
     if (listaUsers != null) {
-        
+
         listaUsers.forEach(function (userLogin) {
-            console.log("En validacion "+ cedula +" "+ userLogin.cedula );
+            console.log("En validacion " + cedula + " " + userLogin.cedula);
             if (userLogin.cedula === cedula) {
 
                 console.log(cedula);
@@ -67,16 +66,18 @@ function AddPersonal() {
     }
 
     let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
+    if (listaUsers != null) {
+        if (ValidarEmpleado(listaUsers, newPersonal.cedula) > 0) {
+            alert("El documento del empleado ya existe!");
+        }
+        else {
+            listaUsers.push(newPersonal);
+            localStorage.setItem("Usuario", JSON.stringify(listaUsers));
+             document.location.href = "registro_Per.html";
+            alert("Empleado registrado correctamente!");
+        }
+    }
 
-    if (ValidarEmpleado(listaUsers, newPersonal.cedula) > 0) {
-        alert("El documento del empleado ya existe!");
-    }
-    else {
-        listaUsers.push(newPersonal);
-        localStorage.setItem("Usuario", JSON.stringify(listaUsers));
-       // document.location.href = "registro_Per.html";
-        alert("Empleado registrado correctamente!");
-    }
 
 
 }

@@ -1,5 +1,3 @@
-
-
 class UsersAdmin {
     constructor(cedula, nombre, apellido, correo, cargo, tipoUsuario, password) {
 
@@ -51,23 +49,22 @@ let usuario = [{
 }
 ]
 let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
-console.log(listaUsers);
-if (ValidarEmpleado(listaUsers, usuario.cedula) > 0) {
-    alert("El documento del empleado ya existe!");
+if (listaUsers != null) {
+
 }
 else {
     administrador.AddAdmin(usuario);
 }
+
 
 function ValidarEmpleado(listaUsers, cedula) {
     let valor = 0;
     console.log(cedula);
     if (listaUsers != null) {
         listaUsers.forEach(function (userLogin) {
-            if (userLogin.cedula == cedula) {
+            if (userLogin.cedula === cedula) {
                 valor = 1;
             }
-
         })
     }
     return valor
