@@ -48,7 +48,16 @@ let usuario = [{
     password: "5678"
 }
 ]
-administrador.AddAdmin(usuario);
+let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
+console.log(listaUsers);
+if (ValidarEmpleado(listaUsers, usuario.cedula) > 0) {
+    alert("El documento del empleado ya existe!");
+}
+else {
+    administrador.AddAdmin(usuario);
+}
+
+
 
 // validar el acceso de usuarios
 function ValidarLogin() {
@@ -58,6 +67,8 @@ function ValidarLogin() {
 
     let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
     let cont = 0;
+
+
 
     listaUsers.forEach(function (userLogin) {
 
@@ -81,19 +92,17 @@ function ValidarLogin() {
 }
 
 function ValidarEmpleado(listaUsers, cedula) {
+    let valor = 0;
+    if (listaUsers != null) {
+        listaUsers.forEach(function (userLogin) {
+            if (userLogin.cedula == cedula) {
+                valor = 1;
+            }
 
-    listaUsers.forEach(function (userLogin) {
-        let valor = 0;
-        if (userLogin.cedula == cedula) {
-            valor = 1;
-        }
-        return valor
-    })
-
-
+        })
+    }
+    return valor
 }
-
-
 
 function AddPersonal() {
     let txtcedula = document.getElementById("cedula").value;
