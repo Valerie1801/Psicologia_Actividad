@@ -122,6 +122,7 @@ function AddPersonal() {
     }
 
     let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
+    
     if (ValidarEmpleado(listaUsers, newPersonal.cedula) > 0) {
         alert("El documento del empleado ya existe!");
     }
