@@ -17,7 +17,7 @@ function ValidarLogin() {
                 document.location.href = "registro_Per.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
                 cont += 1;
-            } else if (userLogin.tipoUsuario == 'user') {
+            } else if (userLogin.tipoUsuario == 'medico') {
                 document.location.href = "registro_Pac.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
                 cont += 1;
