@@ -1,3 +1,5 @@
+import {Personal} from './Personal.js'
+document.getElementById('Login').addEventListener('click',ValidarLogin);
 function ValidarLogin()
 {
     let usuario = document.getElementById("usuario").value;
@@ -17,28 +19,6 @@ function ValidarLogin()
     
 }
 
-function Usuarios()
-{
-    const listaUsuarios = 
-    [
-        {
-            usuario: 'psicologo',
-            password: 'itsa1234',
-            tipoUsuario: 'admin'
-        },
-        {
-            usuario: 'secretaria',
-            password: 'itsa4321',
-            tipoUsuario: 'auxiliar'
-        },
-        {
-            usuario: 'paciente',
-            password: 'itsa5678',
-            tipoUsuario: 'user'
-        }
 
-    ]
- 
-    return listaUsuarios
-}
 
+export default ValidarLogin;
