@@ -57,6 +57,8 @@ function ValidarLogin() {
     let password = document.getElementById("password").value;
 
     let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
+    let cont = 0 ;
+
     listaUsers.forEach(function (userLogin) {
 
         if (userLogin.correo == usuariomail && userLogin.password == password) {
@@ -64,15 +66,18 @@ function ValidarLogin() {
             if (userLogin.tipoUsuario == 'admin') {
                 document.location.href = "registro_Per.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre+""+userLogin.apellido);
+                cont +=1;
             } else if (userLogin.tipoUsuario == 'user') {
                 document.location.href = "registro_Pac.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre+""+userLogin.apellido);
+                cont += 1; 
             }
         }
-
-        alert();
-
+       
     })
+    if(cont == 0){
+        alert("Por Favor Revise su Usuario y Contraseña");
+    }
 }
 
 
