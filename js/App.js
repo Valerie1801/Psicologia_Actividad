@@ -80,6 +80,21 @@ function ValidarLogin() {
     }
 }
 
+function ValidarEmpleado(listaUsers, cedula) {
+
+    listaUsers.forEach(function (userLogin) {
+        let valor = 0;
+        if (userLogin.cedula == cedula) {
+            valor = 1;
+        }
+        return valor
+    })
+
+
+}
+
+
+
 function AddPersonal() {
     let txtcedula = document.getElementById("cedula").value;
     let txtnombre = document.getElementById("nombre").value;
@@ -98,8 +113,15 @@ function AddPersonal() {
     }
 
     let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
-    listaUsers.push(newPersonal);
-    localStorage.setItem("Usuario",JSON.stringify(listaUsers));
-    alert("Empleado registrado correctamente!");
+    if (ValidarEmpleado(listaUsers, newPersonal.cedula) > 0) {
+        alert("El documento del empleado ya existe!");
+    }
+    else {
+        listaUsers.push(newPersonal);
+        localStorage.setItem("Usuario", JSON.stringify(listaUsers));
+        document.location.href = "registro_Per.html";
+        alert("Empleado registrado correctamente!");
+    }
+
 
 }
