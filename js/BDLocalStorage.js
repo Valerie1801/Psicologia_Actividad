@@ -17,5 +17,6 @@ export default class LocalStorage {
       }
       return data
     }
+    static getInstance = () => this.instance || (this.instance = new this())
   }
   
