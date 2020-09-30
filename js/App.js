@@ -11,13 +11,13 @@ function ValidarLogin() {
             if (userLogin.tipoUsuario == 'admin') {
                 document.location.href = "registro_Per.html";                
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
-                addLoginName(userLogin.nombre,userLogin.apellido);
+                addLoginName(userLogin.nombre,userLogin.apellido,userLogin.genero);
 
                 cont += 1;
             } else if (userLogin.tipoUsuario == 'medico') {
                 document.location.href = "registro_Pac.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
-                addLoginName(userLogin.nombre,userLogin.apellido);
+                addLoginName(userLogin.nombre,userLogin.apellido,userLogin.genero);
                 cont += 1;
             }
         }
@@ -29,10 +29,11 @@ function ValidarLogin() {
 
 
 
-function addLoginName(loginName,loginLastName){
+function addLoginName(loginName,loginLastName,loginGenero){
     let usuarioLogin =[{
         nombreUsuario: loginName,
-        apellidoUsuario: loginLastName
+        apellidoUsuario: loginLastName,
+        generoUsuario: loginGenero
     }]
     localStorage.setItem("login", JSON.stringify(usuarioLogin));
 }

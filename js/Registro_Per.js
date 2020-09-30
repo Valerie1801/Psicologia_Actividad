@@ -2,7 +2,7 @@
 
 //const { event } = require("jquery");
 import { closeLogin } from './CerrarSesion.js'
-
+import {mostrarNombre} from './NombreLogin.js'
 
 function AddPersonal() {
 
@@ -11,13 +11,16 @@ function AddPersonal() {
     let txtapellido = document.getElementById("apellido").value;
     let txtcargo = document.getElementById("cargo").value;
     let txtcorreo = document.getElementById("correo").value;
+    let txtGenero = document.getElementById("genero").value;
 
-    newPersonal = {
+    console.log(txtGenero);
+    let newPersonal = {
         cedula: txtcedula,
         nombre: txtnombre,
         apellido: txtapellido,
         correo: txtcorreo,
         cargo: txtcargo,
+        genero: txtGenero,
         tipoUsuario: "medico",
         password: "1234"
     }
@@ -55,11 +58,7 @@ function ValidarEmpleado(listaUsers, cedula) {
 
 // ejecuciones de codigo ***************************
 
-// Poner el nombre de la persona que se logueo---
-let datoLogin = JSON.parse(localStorage.getItem("login"));
-document.getElementById("loginName").textContent = datoLogin[0].nombreUsuario + " " + datoLogin[0].apellidoUsuario;
-console.log(datoLogin);
-
+mostrarNombre();
 //ejecutar el evento Onsubmit del formulario para agregar personas ---------------
 document.getElementById("addPersons").onsubmit = function () {
     AddPersonal();
@@ -78,10 +77,10 @@ function closeLogin(){
         apellidoUsuario: ""
     }]
     localStorage.setItem("login", JSON.stringify(usuarioLogin));
-    document.location.href = "index.html";    
+    document.location.href = "index.html";
 }
 
-// elmiminar del LocalStorage 
+// elmiminar del LocalStorage
 eliminar(id) {
     let datosPlatos = this.obtenerPlatos();
     if (datosPlatos) {
