@@ -9,8 +9,7 @@ function ValidarLogin() {
         if (userLogin.correo == usuariomail && userLogin.password == password) {
             console.log("El usuario es de Tipo " + userLogin.tipoUsuario + userLogin.correo);
             if (userLogin.tipoUsuario == 'admin') {
-                document.location.href = "registro_Per.html";
-                
+                document.location.href = "registro_Per.html";                
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
                 addLoginName(userLogin.nombre,userLogin.apellido);
 
@@ -18,6 +17,7 @@ function ValidarLogin() {
             } else if (userLogin.tipoUsuario == 'medico') {
                 document.location.href = "registro_Pac.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
+                addLoginName(userLogin.nombre,userLogin.apellido);
                 cont += 1;
             }
         }

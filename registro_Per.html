@@ -29,87 +29,89 @@
 </head>
 
 <body>
-<form action="submit" id="addPersons">
+    <form action="javascript:void(0)" id="addPersons" onsubmit="AddPersonal()">
+        <div id="loginName" class="card-header text-uppercase font-weight-bold text-center  "></div>
+        <div class="container">
 
-    <div class="container">
 
-        <!-- Imagen encabezado  -->
+            <!-- Imagen encabezado  -->
 
-        <div class="banner">
-            <img src="img/encabezadops.jpg" class="img-fluid" alt="Responsive image">
-        </div>
-
-        <br>
-
-        <!--Contenedor página-->
-
-        <div class="container-fluid" style="overflow: hidden;" id="menu">
-
-            <!-- menu de opciones  -->
-            <nav class="navbar navbar-expand-md nav bg-info navbar-light">
-
-                <!-- boton desplegable -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- menú opciones  -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    <ul class="navbar-nav">
-
-                        <li class="nav-item active">
-                            <a class="nav-link text-light" href="registro_Per.html">REGISTRO PERSONAL</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="listado_personal.html">LISTADO PERSONAL</a>
-                        </li>
-
-                    </ul>
-                    <ul class="navbar-nav ml-auto">
-                        <form class="form-inline my-2 my-lg-0">
-                         <div id="loginName" class=""></div>
-                         
-                            <a class="btn btn-outline-light my-2 my-sm-0" href="index.html" id="btn_cerrar">CERRAR
-                                SESION</a>
-                        </form>
-                    </ul>
-                </div>
-            </nav>
-            <!-- fin menu de opciones  -->
-
+            <div class="banner">
+                <img src="img/encabezadops.jpg" class="img-fluid" alt="Responsive image">
+            </div>
 
             <br>
 
-            <!--INICIO CONTENIDO-->
+            <!--Contenedor página-->
 
+            <div class="container-fluid" style="overflow: hidden;" id="menu">
 
+                <!-- menu de opciones  -->
+                <nav class="navbar navbar-expand-md nav bg-info navbar-light">
 
-            <!--FORMULARIO DE INFORMACION PACIENTES-->
+                    <!-- boton desplegable -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-            <div class="form-group">
-                <div class="card border-info">
-                    <div class="card-header">
-                        <h2>Formulario registro de personal</h2>
+                    <!-- menú opciones  -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav">
+
+                            <li class="nav-item active">
+                                <a class="nav-link text-light" href="registro_Per.html">REGISTRO PERSONAL</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="listado_personal.html">LISTADO PERSONAL</a>
+                            </li>
+
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <input id="closeLogin" type="submit" form="closeLogin" value="CERRAR SESION"
+                                class="btn text-white my-2 my-sm-0" onclick="closeLogin()">
+
+                        </ul>
                     </div>
-                    <div class="card-body text-info text-center">
-                        <div class="row">
-                            <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <br>
+                </nav>
+                <!-- fin menu de opciones  -->
 
-                                <input type="text" placeholder="No. Identificacion" class="form-control" id="cedula" required><br>
-                                <input type="text" placeholder="Nombre" class="form-control" id="nombre" required ><br>
-                                <input type="text" placeholder="Apellido" class="form-control" id="apellido" required><br>
-                                <input type="text" placeholder="Cargo" class="form-control" id="cargo" required><br>
-                                <input type="text" placeholder="Correo electrónico" class="form-control" id="correo" required><br>
 
-                            </div>
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <br>
 
-                                <input type="button" value="Registrar Empleado" class="btn btn-outline-info my-2 my-sm-0"  onclick="AddPersonal()">
-                                <input type="submit" value="Registrar" class="btn btn-outline-info my-2 my-sm-0" onsubmit="AddPersonal()">
+                <!--INICIO CONTENIDO-->
+
+
+
+                <!--FORMULARIO DE INFORMACION PACIENTES-->
+
+                <div class="form-group">
+                    <div class="card border-info">
+                        <div class="card-header">
+                            <h2>Formulario registro de personal</h2>
+                        </div>
+                        <div class="card-body text-info text-center">
+                            <div class="row">
+                                <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <br>
+
+                                    <input type="text" placeholder="No. Identificacion" class="form-control" id="cedula"
+                                        required><br>
+                                    <input type="text" placeholder="Nombre" class="form-control" id="nombre"
+                                        required><br>
+                                    <input type="text" placeholder="Apellido" class="form-control" id="apellido"
+                                        required><br>
+                                    <input type="text" placeholder="Cargo" class="form-control" id="cargo" required><br>
+                                    <input type="text" placeholder="Correo electrónico" class="form-control" id="correo"
+                                        required><br>
+
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <input type="submit" value="Registrar" class="btn btn-outline-info my-2 my-sm-0">
+
+                                </div>
 
                             </div>
 
@@ -118,32 +120,30 @@
                     </div>
 
                 </div>
+                <!--FIN FORMULARIO DE SOLICITUD-->
 
+                <!--FIN CONTENIDO-->
             </div>
-            <!--FIN FORMULARIO DE SOLICITUD-->
 
-            <!--FIN CONTENIDO-->
+
+
+            <!-- Footer -->
+
+            <footer class="bg-info" style="margin-top: 1rem; padding: 1rem 0" id="pie_pagina">
+                <span class="text-light  text-center font-Arial Black" style="display: block">
+                    Cra. 45 #48-31, Barranquilla
+                </span>
+                <span class="text-light text-center" style="display: block">
+                    servicioalcliente@psicologosbq.com
+                </span>
+                <span class="text-light text-center" style="display: block">Tel: 3458762 - Cel: 3009872346</span>
+            </footer>
+
+            <!-- Footer -->
         </div>
+        <script src="js/Registro_Per.js" type="module"></script>
 
-
-
-        <!-- Footer -->
-
-        <footer class="bg-info" style="margin-top: 1rem; padding: 1rem 0" id="pie_pagina">
-            <span class="text-light  text-center font-Arial Black" style="display: block">
-                Cra. 45 #48-31, Barranquilla
-            </span>
-            <span class="text-light text-center" style="display: block">
-                servicioalcliente@psicologosbq.com
-            </span>
-            <span class="text-light text-center" style="display: block">Tel: 3458762 - Cel: 3009872346</span>
-        </footer>
-
-        <!-- Footer -->
-    </div>
-    <script src="js/Registro_Per.js"></script>
-
-</form>
+    </form>
 </body>
 
 </html>
