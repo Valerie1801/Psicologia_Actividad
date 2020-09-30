@@ -29,7 +29,7 @@
 </head>
 
 <body>
-
+<form action="submit" id="addPersons">
 
     <div class="container">
 
@@ -69,8 +69,9 @@
 
                     </ul>
                     <ul class="navbar-nav ml-auto">
-
                         <form class="form-inline my-2 my-lg-0">
+                         <div id="loginName" class=""></div>
+                         
                             <a class="btn btn-outline-light my-2 my-sm-0" href="index.html" id="btn_cerrar">CERRAR
                                 SESION</a>
                         </form>
@@ -98,18 +99,17 @@
                             <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <br>
 
-                                <input type="text" placeholder="No. Identificacion" class="form-control"
-                                    id="cedula"><br>
-                                <input type="text" placeholder="Nombre" class="form-control" id="nombre"><br>
-                                <input type="text" placeholder="Apellido" class="form-control" id="apellido"><br>
-                                <input type="text" placeholder="Cargo" class="form-control" id="cargo"><br>
-                                <input type="text" placeholder="Correo electrónico" class="form-control"
-                                    id="correo"><br>
+                                <input type="text" placeholder="No. Identificacion" class="form-control" id="cedula" required><br>
+                                <input type="text" placeholder="Nombre" class="form-control" id="nombre" required ><br>
+                                <input type="text" placeholder="Apellido" class="form-control" id="apellido" required><br>
+                                <input type="text" placeholder="Cargo" class="form-control" id="cargo" required><br>
+                                <input type="text" placeholder="Correo electrónico" class="form-control" id="correo" required><br>
 
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
                                 <input type="button" value="Registrar Empleado" class="btn btn-outline-info my-2 my-sm-0"  onclick="AddPersonal()">
+                                <input type="submit" value="Registrar" class="btn btn-outline-info my-2 my-sm-0" onsubmit="AddPersonal()">
 
                             </div>
 
@@ -141,7 +141,9 @@
 
         <!-- Footer -->
     </div>
-    <script src="js/App.js"></script>
+    <script src="js/Registro_Per.js"></script>
+
+</form>
 </body>
 
 </html>
