@@ -1,4 +1,4 @@
-*{
+/* *{
 	padding: 0px;
 	margin: 0px;
 }
@@ -17,7 +17,7 @@ img{
 	display: flex;
 
 	animation: slide 10s infinite alternate;
-}
+} */
 
 @keyframes slide{
 	0% {margin-left: 0px;}

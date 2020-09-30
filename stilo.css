@@ -1,4 +1,4 @@
-*{
+/* *{
 	padding: 0px;
 	margin: 0px;
 }
@@ -17,9 +17,9 @@ img{
 	display: flex;
 
 	animation: slide 10s infinite alternate;
-}
+} */
 
-@keyframes slide{
+/* @keyframes slide{
 	0% {margin-left: 0px;}
 	10%{margin-left: 0px;}
 
@@ -31,7 +31,7 @@ img{
 
 	75%{margin-left: -2100px;}
 	100%{margin-left: -2100px;}
-}
+} */
 
 body{
 	background-color:#0000;
@@ -40,6 +40,7 @@ body{
 	width: 97%;
 	margin: 0 auto;
 	height: 38vh;
+	color: black;
 	
 }
 .banner img{
