@@ -35,6 +35,7 @@ let usuario = [{
     apellido: "Ruiz",
     correo: "JuanRuiz@mail.com",
     cargo: "Sistemas",
+    genero: "Masculino",
     tipoUsuario: "admin",
     password: "1234"
 },
@@ -44,6 +45,7 @@ let usuario = [{
     apellido: "Olivares",
     correo: "ValerieOlivares@mail.com",
     cargo: "Sistemas",
+    genero: "Femenino",
     tipoUsuario: "admin",
     password: "5678"
 }

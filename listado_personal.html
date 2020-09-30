@@ -66,14 +66,14 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="listado_personal.html">LISTADO PERSONAL</a>
                         </li>
-                        
+
                     </ul>
                     <ul class="navbar-nav ml-auto">
 
                         <form class="form-inline my-2 my-lg-0">
 
-                                <a class="btn btn-outline-light my-2 my-sm-0" href="index.html" id="btn_cerrar">CERRAR
-                                    SESION</a>
+                            <a class="btn btn-outline-light my-2 my-sm-0" href="index.html" id="btn_cerrar">CERRAR
+                                SESION</a>
                         </form>
                     </ul>
                 </div>
@@ -84,44 +84,27 @@
             <br>
 
             <!--INICIO CONTENIDO-->
-             
+
             <!--TABLA LISTADO DE PERSONAL-->
 
-            <table class="table  table-responsive-md table-striped text-center align-middle" id="t_personal">
+            <table id="tablaPersonal" class="table  table-responsive-md table-striped text-center align-middle" >
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>CARGO</th>
-                        <th>E-MAIL</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     <tr>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
+                        <td id="nombre" ></td>
+                        <td id="apellido"></td>              
+                        <td id="cargo" ></td>
                     </tr>
-                    <tr>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
-                    <tr>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                        <td>#</td>
-                    </tr>
+                    
                 </tbody>
             </table>
-           
+
             <!--FIN TABLA LISTADO DE PERSONAL-->
 
             <!--FIN CONTENIDO-->
@@ -144,7 +127,7 @@
         <!-- Footer -->
 
     </div>
-
+    <script src="js/ListaEmpleados.js" type="module"></script>
 </body>
 
 </html>
