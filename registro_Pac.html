@@ -30,7 +30,7 @@
 
 <body>
 
-    <form id="addPacientes" onsubmit="AddPacientes()">
+    <form action="javascript:void(0)" id="addPacientes" onsubmit="AddPacientes()">
 
         <div id="loginName" class="card-header text-uppercase font-weight-bold text-center bg-info text-light"></div>
         <br>
@@ -72,9 +72,8 @@
                     <ul class="navbar-nav ml-auto">
 
                         <form class="form-inline my-2 my-lg-0">
-
-                            <a class="btn btn-outline-light my-2 my-sm-0" href="index.html" id="btn_cerrar">CERRAR
-                                SESION</a>
+                            <input id="closeLogin" type="submit" form="closeLogin" value="CERRAR SESION"
+                                class="btn btn-outline-light my-2 my-sm-0" onclick="closeLogin()">
 
                         </form>
                     </ul>
@@ -107,12 +106,20 @@
                                 <input type="text" placeholder="Apellido" class="form-control" id="apellido"><br>
                                 <input type="text" placeholder="Correo electrónico" class="form-control"
                                     id="correo"><br>
+                                <div class="form-group">
+                                    <select class="form-control" id="genero">
+                                        <option>Seleccione Tipo de Genero</option>
+                                        <option>Masculino</option>
+                                        <option>Femenino</option>
+                                    </select>
+                                </div>
 
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                                <input type="button" value="Registrar Paciente" class="btn btn-outline-info my-2 my-sm-0" onclick="AddPacientes()">
-
+                                <input type="button" value="Registrar Paciente"
+                                    class="btn btn-outline-info my-2 my-sm-0" onsubmit="AddPacientes()">
+                                <input type="submit" value="Registrar" class="btn btn-outline-info my-2 my-sm-0">
 
                             </div>
 
@@ -127,7 +134,7 @@
 
             <!--FIN CONTENIDO-->
         </div>
-    
+
 
 
 
@@ -148,7 +155,7 @@
 
         </div>
     </form>
-    <script src="js/Registro_Pac.js"></script>
+    <script src="js/Registro_Pac.js" type="module"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 import { closeLogin } from './CerrarSesion.js'
 import {mostrarNombre} from './NombreLogin.js'
+
 // funcion para insertar los Pacientes 
 function AddPacientes() {
 
@@ -62,8 +63,8 @@ function ValidarPacientes(listaPacientes, cedula) {
 
 mostrarNombre();
 //ejecutar el evento Onsubmit del formulario para agregar personas ---------------
-document.getElementById("addPersons").onsubmit = function () {
-    AddPersonal();
+document.getElementById("addPacientes").onsubmit = function () {
+    AddPacientes();
     event.preventDefault();
 };
 
