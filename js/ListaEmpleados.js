@@ -32,7 +32,6 @@ function mostrarTabla() {
         fila.appendChild(nombre);
         fila.appendChild(apellido);
         fila.appendChild(cargo);
-
         tbody.appendChild(fila);
     }
 }
