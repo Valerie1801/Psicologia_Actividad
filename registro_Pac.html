@@ -29,8 +29,11 @@
 </head>
 
 <body>
-    <div class="container">
 
+    <form action="javascript:void(0)" id="addPersons" onsubmit="AddPersonal()">
+
+        <div id="loginName" class="card-header text-uppercase font-weight-bold text-center bg-info text-light"></div>
+        <br>
         <!-- Imagen encabezado  -->
 
         <div class="banner">
@@ -41,7 +44,7 @@
 
         <!--Contenedor página-->
 
-        <div class="container-fluid" style="overflow: hidden;" id="menu">
+        <div style="overflow: hidden;" id="menu">
 
             <!-- menu de opciones  -->
             <nav class="navbar navbar-expand-md nav bg-info navbar-light">
@@ -78,9 +81,11 @@
                 </div>
             </nav>
             <!-- fin menu de opciones  -->
+        </div>
 
+        <br>
 
-            <br>
+        <div class="container">
 
             <!--INICIO CONTENIDO-->
 
@@ -96,16 +101,18 @@
                         <div class="row">
                             <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <br>
-                                <input type="text" placeholder="No. Identificacion" class="form-control" id="cedula"><br>
+                                <input type="text" placeholder="No. Identificacion" class="form-control"
+                                    id="cedula"><br>
                                 <input type="text" placeholder="Nombre" class="form-control" id="nombre"><br>
                                 <input type="text" placeholder="Apellido" class="form-control" id="apellido"><br>
-                                <input type="text" placeholder="Correo electrónico" class="form-control" id="correo"><br>
-                           
+                                <input type="text" placeholder="Correo electrónico" class="form-control"
+                                    id="correo"><br>
+
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                                <input type="button" value="Registrar Paciente" class="" onclick="AddPacientes()">
-                                
+                                <input type="button" value="Registrar Paciente" class="btn btn-outline-info my-2 my-sm-0" onclick="AddPacientes()">
+
 
                             </div>
 
@@ -120,6 +127,7 @@
 
             <!--FIN CONTENIDO-->
         </div>
+    
 
 
 
@@ -127,7 +135,7 @@
 
         <footer class="bg-info" style="margin-top: 1rem; padding: 1rem 0" id="pie_pagina">
             <span class="text-light  text-center font-Arial Black" style="display: block">
-                
+
                 Cra. 45 #48-31, Barranquilla
             </span>
             <span class="text-light text-center" style="display: block">
@@ -138,9 +146,9 @@
 
         <!-- Footer -->
 
-    </div>
-
-    <script src="js/App.js" ></script>
+        </div>
+    </form>
+    <script src="js/App.js"></script>
 </body>
 
 </html>
