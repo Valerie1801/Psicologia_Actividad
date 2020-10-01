@@ -89,15 +89,6 @@ function closeLogin(){
     document.location.href = "index.html";
 }
 
-// elmiminar del LocalStorage
-eliminar(id) {
-    let datosPlatos = this.obtenerPlatos();
-    if (datosPlatos) {
-        datosPlatos = datosPlatos.filter(plato => plato.id !== id);
-        this.almacenamiento.insertarDatos(this.claveAlmacenamiento, datosPlatos);
-        return true;
-    }
-    return;
-}
+
    //   datosPlatos = datosPlatos.filter(plato => plato.id !== id);*/
 

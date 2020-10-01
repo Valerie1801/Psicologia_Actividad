@@ -32,14 +32,12 @@ function ValidarLogin() {
     }
 }
 
-
 function addLoginName(loginName, loginLastName, loginGenero, loginTipo) {
     let usuarioLogin = [{
         nombreUsuario: loginName,
         apellidoUsuario: loginLastName,
         generoUsuario: loginGenero,
         tipoUsuario: loginTipo
-
     }]
     localStorage.setItem("login", JSON.stringify(usuarioLogin));
 }

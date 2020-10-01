@@ -31,6 +31,8 @@ function consultarDocumento() {
 }
 
 
+
+
 // Consultar paciente para la atencion
 
 function registrarAtencion() {
@@ -40,14 +42,15 @@ function registrarAtencion() {
     let txtDescripcion = document.getElementById("descripcion").value;
     let txtMedicinas = document.getElementById("medicinas").value;
     let listaPacientes = JSON.parse(localStorage.getItem("Historial"));
+    let idlistaPacientes = JSON.parse(localStorage.getItem("Historial"));
+
+
     let idAtencionCita;
-    if (listaPacientes != null) {
-        idAtencionCita = listaPacientes.length;
+    if (idlistaPacientes != null) {
+        idAtencionCita = idlistaPacientes.pop().idAtencion + 1;
     } else {
         idAtencionCita = 0;
     }
-
-
     let newPaciente = {
         idAtencion: idAtencionCita,
         cedula: txtcedula,
@@ -56,9 +59,14 @@ function registrarAtencion() {
         medicinas: txtMedicinas
     }
 
+  
+
 
     //si el Array tiene algo lo validamos    
     if (listaPacientes != null) {
+        
+   
+
         listaPacientes.push(newPaciente);
         localStorage.setItem("Historial", JSON.stringify(listaPacientes));
         document.location.href = "Atencion_Pacientes.html";
@@ -91,6 +99,7 @@ document.getElementById("closeLogin").onclick = function () {
 
 document.getElementById("findPaciente").onclick = function () {
     console.log("entro aqui     ");
+    console.log(JSON.parse(localStorage.getItem("Historial")));
     let paciente = consultarDocumento();
     if (paciente != null) {
         document.getElementById("nombrePaciente").textContent = paciente[0].nombre + " " + paciente[0].apellido;
