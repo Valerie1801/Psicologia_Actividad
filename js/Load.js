@@ -49,7 +49,18 @@ let usuario = [{
     genero: "Femenino",
     tipoUsuario: "admin",
     password: "5678"
+},
+{
+    cedula: "111213",
+    nombre: "Bryan",
+    apellido: "Fernandez",
+    correo: "bfernandez@mail.com",
+    cargo: "Sistemas",
+    genero: "Masculino",
+    tipoUsuario: "admin",
+    password: "1234"
 }
+
 ]
 let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
 if (listaUsers != null) {
