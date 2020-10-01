@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="stilo.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
 
-    <title>HISTORIAL DE PACIENTES</title>
+    <title>REGISTRO DE PACIENTES</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
@@ -30,19 +30,17 @@
 
 <body>
 
-    <form action="javascript:void(0)" id="addPacientes" onsubmit="AddPacientes()">
+    <form id="addPacientes" onsubmit="AddPacientes()">
 
         <div id="loginName" class="card-header text-uppercase font-weight-bold text-center bg-info text-light"></div>
-
         <br>
         <!-- Imagen encabezado  -->
 
         <div class="banner">
-            <img src="img/sesion2.jpg" class="img-fluid" alt="Responsive image" id="Encabezado_p">
+            <img src="img/sesion2.jpg" class="img-fluid" alt="Responsive image" id="encabezado">
         </div>
 
         <br>
-
 
         <!--Contenedor página-->
 
@@ -66,12 +64,14 @@
                             <a class="nav-link text-light" href="registro_Pac.html">REGISTRO PACIENTES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="Atencion_Pacientes.html">ATENCION PACIENTE</a>
+                            <a class="nav-link text-light" href="Atencion_pacientes.html">ATENCION PACIENTES</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link text-light" href="H_paciente.html">HISTORICO PACIENTE</a>
                         </li>
+
+                        
 
                     </ul>
                     <ul class="navbar-nav ml-auto">
@@ -83,70 +83,68 @@
 
                         </form>
                     </ul>
+
                 </div>
-            </nav>
-            <!-- fin menu de opciones  -->
-        </div>
 
-
-        <br>
-        <!-- BUSQUEDA DEL PACIENTE-->
-        <div style="overflow: hidden;" id="menu">
-
-            <!-- menu de opciones  -->
-            <nav class="navbar navbar-expand-md nav bg-light navbar-light">
-
-                <!-- boton desplegable -->
-           
-
-                <!-- menú opciones  -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto"> <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Documento Paciente" aria-label="Search" id="documentoPaciente">
-                        <button id="findPaciente" class="btn btn-outline-info my-2 my-sm-0" type="submit" onclick="mostrarTabla()" >Consultar</button>
-                      </form></ul>
-
-                   
-                </div>
             </nav>
             <!-- fin menu de opciones  -->
         </div>
 
         <br>
+
         <div class="container">
 
             <!--INICIO CONTENIDO-->
 
 
-            <!--TABLA DE HISTORIAL DE PACIENTES-->
+            <!--FORMULARIO DE INFORMACION PACIENTES-->
 
-            <table class="table table-responsive-md table-striped text-center align-middle" id="t_paciente">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>NOMBRE</th>
-                        <th>APELLIDO</th>
-                        <th>E-MAL</th>
-                        <th>DIAGNOSTICO</th>
-                        <th>TRATAMIENTO</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <div class="form-group" id="formulario">
+                <div class="card border-info">
+                    <div class="card-header">
+                        <h2>Atencion de pacientes</h2>
+                    </div>
+                    <div class="card-body text-info text-center" id="caja_formulario">
+                        <div class="row">
+                            <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <br>
+                                <label class="h6">Descripcion historial</label>
+                                <textarea type="text" class="form-control" id="descripcion" rows="3"
+                                    required></textarea><br>
 
-                </tbody>
-            </table>
+                                <label class="h6">Receta medicinas</label>
+                                <textarea type="text" class="form-control" id="medicinas" rows="3"
+                                    required></textarea><br>
+                                <label class="h6">Fecha próxima cita</label>
+                                <input type="date" class="form-control" id="fechaNextCita" required><br>
 
-            <!--FIN TABLA DE HISTORIAL DE PACIENTES-->
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                                <input type="button" value="Registrar Paciente"
+                                    class="btn btn-outline-info my-2 my-sm-0" onclick="AddPacientes()">
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--FIN FORMULARIO DE SOLICITUD-->
 
             <!--FIN CONTENIDO-->
         </div>
-
 
 
         <!-- Footer -->
 
         <footer class="bg-info" style="margin-top: 1rem; padding: 1rem 0" id="pie_pagina">
             <span class="text-light  text-center font-Arial Black" style="display: block">
+
                 Cra. 45 #48-31, Barranquilla
             </span>
             <span class="text-light text-center" style="display: block">
@@ -156,8 +154,10 @@
         </footer>
 
         <!-- Footer -->
+
+
     </form>
-    <script src="js/Historial_Pacientes.js" type="module"></script>
+    <script src="js/Registro_Pac.js"></script>
 </body>
 
 </html>
