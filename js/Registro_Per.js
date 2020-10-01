@@ -67,6 +67,7 @@ document.getElementById("addPersons").onsubmit = function () {
 
 //ejecutar el evento Onsubmit del formulario para agregar personas ---------------     
 document.getElementById("closeLogin").onclick = function () {
+    console.log("Limpia el local Storage");
     closeLogin();
     event.preventDefault();
 };

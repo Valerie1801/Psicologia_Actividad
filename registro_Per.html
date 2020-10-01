@@ -48,9 +48,9 @@
 
         <!-- menu -->
 
-        <div  style="overflow: hidden;" id="menu">
+        <div style="overflow: hidden;" id="menu">
 
-            
+
             <nav class="navbar navbar-expand-md nav bg-info navbar-light">
 
                 <!-- boton desplegable -->
@@ -105,19 +105,25 @@
                                     required><br>
                                 <input type="text" placeholder="Nombre" class="form-control" id="nombre" required><br>
                                 <input type="text" placeholder="Apellido" class="form-control" id="apellido"
-                                    required><br>
-                                <input type="text" placeholder="Cargo" class="form-control" id="cargo" required><br>
-
-                                <select class="form-control" id="lista_cargo">
-                                    <option>Psicologo</option>
-                                    <option>administrativo</option>
-                                    <option>auxiliar</option>
-                                    <option>enfermero</option>
-                                  </select><br>
-
+                                    required><br>              
+                                <div class="form-group">
+                                    <select class="form-control" id="cargo">
+                                        <option>Seleccione Un Cargo</option>
+                                        <option>Psicologo</option>
+                                        <option>Atencion Al Usuario</option>
+                                        <option>Sistemas</option>
+                                        <option>Enfermera</option>
+                                    </select>
+                                </div>                               
                                 <input type="text" placeholder="Correo electrónico" class="form-control" id="correo"
                                     required><br>
-
+                                <div class="form-group">
+                                    <select class="form-control" id="genero">
+                                        <option>Seleccione Tipo de Genero</option>
+                                        <option>Masculino</option>
+                                        <option>Femenino</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <input type="submit" value="Registrar" class="btn btn-outline-info my-2 my-sm-0">
