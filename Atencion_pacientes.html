@@ -84,7 +84,7 @@
                     </ul>
 
                 </div>
-                
+
             </nav>
             <!-- fin menu de opciones  -->
         </div>
@@ -93,31 +93,40 @@
 
         <div class="container">
 
+
+
             <!--INICIO CONTENIDO-->
 
 
             <!--FORMULARIO DE INFORMACION PACIENTES-->
 
             <div class="form-group" id="formulario">
+
                 <div class="card border-info">
                     <div class="card-header">
-                        <h2>Formulario registro de pacientes</h2>
+                        <h2>Registro Atencion de Pacientes</h2>
+
                     </div>
+                    <button id="botonVenderCarrito" data-toggle="modal" data-target="#modalRealizarVenta"
+                        class="btn btn-outline-info my-2 my-sm-0">Consultar Paciente</button>
+
                     <div class="card-body text-info text-center" id="caja_formulario">
                         <div class="row">
                             <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <br>
                                 <input type="text" placeholder="No. Identificacion" class="form-control"
                                     id="cedula"><br>
-                                <input type="text" placeholder="Nombre" class="form-control" id="nombre"><br>
-                                <input type="text" placeholder="Apellido" class="form-control" id="apellido"><br>
-                                <input type="text" placeholder="Correo electrónico" class="form-control"
-                                    id="correo"><br>
+                                <input type="text" placeholder="Nombre" class="form-control" id="nombre" required><br>
+                                <input type="text" placeholder="Apellido" class="form-control" id="apellido"
+                                    required><br>
+                                <input type="text" placeholder="Correo electrónico" class="form-control" id="correo"
+                                    required><br>
 
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                                <input type="button" value="Registrar Paciente" class="btn btn-outline-info my-2 my-sm-0" onclick="AddPacientes()">
+                                <input type="button" value="Registrar Paciente"
+                                    class="btn btn-outline-info my-2 my-sm-0" onclick="AddPacientes()">
 
 
                             </div>
@@ -133,7 +142,7 @@
 
             <!--FIN CONTENIDO-->
         </div>
-    
+
 
         <!-- Footer -->
 
@@ -150,9 +159,31 @@
 
         <!-- Footer -->
 
-    
+
     </form>
-    <script src="js/Registro_Pac.js"></script>
+    <div class="modal fade" id="modalRealizarVenta" tabindex="-1" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content" style=" max-width: 18rem;">
+                <div class="modal-header py-0 border-bottom-0 pt-2">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="card border-top-0 pt-0">
+                    <div class="card-body">
+                        <label for="">Numero Documento del Paciente</label>
+                        <input type="text" class="form-control" placeholder="Numero Documento" id="findDocumento"><br>
+                        <button id="findPaciente" class="btn btn-outline-info my-2 my-sm-0"
+                            onclick="findPaciente()">Consultar</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/AtencionPacientes.js" type="module"></script>
 </body>
 
 </html>

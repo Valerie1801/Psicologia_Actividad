@@ -30,7 +30,7 @@
 
 <body>
 
-    <form action="javascript:void(0)" id="addPacientes" onsubmit="AddPacientes()">
+    <form id="addPacientes" onsubmit="AddPacientes()">
 
         <div id="loginName" class="card-header text-uppercase font-weight-bold text-center bg-info text-light"></div>
         <br>
@@ -75,11 +75,11 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
 
-                        <form class="form-inline my-2 my-lg-0">
+                       
                             <input id="closeLogin" type="submit" form="closeLogin" value="CERRAR SESION"
                                 class="btn btn-outline-light my-2 my-sm-0" onclick="closeLogin()">
 
-                        </form>
+                  
                     </ul>
 
                 </div>
@@ -106,12 +106,13 @@
                         <div class="row">
                             <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <br>
-                                <input type="text" placeholder="No. Identificacion" class="form-control"
-                                    id="cedula"><br>
-                                <input type="text" placeholder="Nombre" class="form-control" id="nombre"><br>
-                                <input type="text" placeholder="Apellido" class="form-control" id="apellido"><br>
-                                <input type="text" placeholder="Correo electrónico" class="form-control"
-                                    id="correo"><br>
+                                <input type="text" placeholder="No. Identificacion" class="form-control" id="cedula"
+                                    required><br>
+                                <input type="text" placeholder="Nombre" class="form-control" id="nombre" required><br>
+                                <input type="text" placeholder="Apellido" class="form-control" id="apellido"
+                                    required><br>
+                                <input type="text" placeholder="Correo electrónico" class="form-control" id="correo"
+                                    required><br>
                                 <div class="form-group">
                                     <select class="form-control" id="genero">
                                         <option>Seleccione Tipo de Genero</option>
@@ -123,9 +124,9 @@
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                                <input type="button" value="Registrar Paciente"
-                                    class="btn btn-outline-info my-2 my-sm-0" onsubmit="AddPacientes()">
-                                <input type="submit" value="Registrar" class="btn btn-outline-info my-2 my-sm-0">
+                                <input type="submit" value="Registrar Paciente"
+                                    class="btn btn-outline-info my-2 my-sm-0">
+                               
 
                             </div>
 
@@ -159,7 +160,7 @@
 
         <!-- Footer -->
 
-    
+
     </form>
     <script src="js/Registro_Pac.js" type="module"></script>
 </body>
