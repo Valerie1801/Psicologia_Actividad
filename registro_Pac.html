@@ -102,25 +102,38 @@
                     <div class="card-header">
                         <h2>Formulario registro de pacientes</h2>
                     </div>
-                    <div class="card-body text-info text-center" id="caja_formulario">
+                    <div class="card-body text-dark" id="caja_formulario">
                         <div class="row">
                             <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <br>
-                                <input type="text" placeholder="No. Identificacion" class="form-control"
-                                    id="cedula"><br>
-                                <input type="text" placeholder="Nombre" class="form-control" id="nombre"><br>
-                                <input type="text" placeholder="Apellido" class="form-control" id="apellido"><br>
-                                <input type="text" placeholder="Correo electrónico" class="form-control"
-                                    id="correo"><br>
-                                <div class="form-group">
-                                    <select class="form-control" id="genero">
+                                <label class="h6">No. Identificacion</label>
+                                <input type="text" class="form-control" id="cedula" required><br>
+
+                                <label class="h6">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" required><br>
+
+                                <label class="h6">Apellido</label>
+                                <input type="text" class="form-control" id="apellido" required><br>
+
+                                <label class="h6">Correo electrónico</label>
+                                <input type="text" class="form-control"id="correo" required><br>
+
+                                <label class="h6">Género</label>
+                                    <select class="form-control" id="genero" required>
                                         <option>Seleccione Tipo de Genero</option>
                                         <option>Masculino</option>
                                         <option>Femenino</option>
-                                    </select>
-                                </div>
+                                    </select> <br>
 
-                            </div>
+                                <label class="h6">Fecha próxima cita</label>
+                                <input type="date"class="form-control" id="correo" required><br>
+
+                                <label class="h6">Descripcion historial</label>
+                                <textarea type="text" class="form-control" id="descripcion" rows="3" required></textarea><br>
+
+                                <label class="h6">Receta medicinas</label>
+                                <textarea type="text" class="form-control" id="medicinas" rows="3" required></textarea><br>
+                                 
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
                                 <input type="button" value="Registrar Paciente"
@@ -140,9 +153,6 @@
 
             <!--FIN CONTENIDO-->
         </div>
-
-
-
 
         <!-- Footer -->
 

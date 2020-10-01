@@ -30,8 +30,11 @@
 
 <body>
 
+    <form action="javascript:void(0)" id="addPersons" onsubmit="AddPersonal()">
 
-    <div class="container">
+        <div id="loginName" class="card-header text-uppercase font-weight-bold text-center bg-info text-light"></div>
+
+        <br>
 
         <!-- Imagen encabezado  -->
 
@@ -43,15 +46,15 @@
 
         <!--Contenedor página-->
 
-        <div class="container-fluid" style="overflow: hidden;" id="menu">
+        <div style="overflow: hidden;" id="menu">
 
             <!-- menu de opciones  -->
             <nav class="navbar navbar-expand-md nav bg-info navbar-light">
                 <!-- boton desplegable -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                    data-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
 
                 <!-- menú opciones  -->
@@ -79,15 +82,18 @@
                 </div>
             </nav>
             <!-- fin menu de opciones  -->
+        </div>
 
 
-            <br>
+        <br>
+
+        <div class="container">
 
             <!--INICIO CONTENIDO-->
 
             <!--TABLA LISTADO DE PERSONAL-->
 
-            <table id="tablaPersonal" class="table  table-responsive-md table-striped text-center align-middle" >
+            <table id="tablaPersonal" class="table  table-responsive-md table-striped text-center align-middle">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -95,13 +101,13 @@
                         <th>CARGO</th>
                     </tr>
                 </thead>
-                <tbody >
+                <tbody>
                     <tr>
-                        <td id="nombre" ></td>
-                        <td id="apellido"></td>              
-                        <td id="cargo" ></td>
+                        <td id="nombre"></td>
+                        <td id="apellido"></td>
+                        <td id="cargo"></td>
                     </tr>
-                    
+
                 </tbody>
             </table>
 
@@ -125,9 +131,8 @@
         </footer>
 
         <!-- Footer -->
-
-    </div>
-    <script src="js/ListaEmpleados.js" type="module"></script>
+        <script src="js/ListaEmpleados.js" type="module"></script>
+    </form>
 </body>
 
 </html>
