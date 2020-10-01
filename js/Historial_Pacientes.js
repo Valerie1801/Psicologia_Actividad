@@ -1,24 +1,34 @@
-function consultarDocumento() {
+
+
+export function consultarDocumento() {
     let documentoPaciente = document.getElementById("documentoPaciente").value;
     let historicoPaciente;
+    let listaHistoricos;
 
-
-    let listaUsers = JSON.parse(localStorage.getItem("Paciente"));
+    let listaUsers = JSON.parse(localStorage.getItem("Historial"));
     if (listaUsers != null) {
         let cont = 0;
         listaUsers.forEach(function (paciente) {
             if (paciente.cedula == documentoPaciente) {
-                historicoPaciente = [{
-                    nombre: paciente.nombre,
-                    apellido: paciente.apellido,
-                    correo: paciente.correo,
-                    descripcion: paciente.descripcion,
-                    fechaNextCita: paciente.fechaNextCita,
-                    genero: paciente.genero,
-                    medicinas: paciente.medicinas
-
-                }]
-                cont++;
+                if (listaHistoricos != null) {
+                    historicoPaciente = {
+                        idAtencion: paciente.idAtencion,
+                        descripcion: paciente.descripcion,
+                        fechaNextCita: paciente.fechaNextCita,
+                        medicinas: paciente.medicinas
+                    };
+                    listaHistoricos.push(historicoPaciente);
+                    cont++;
+                } else {
+                    historicoPaciente = [{
+                        idAtencion: paciente.idAtencion,
+                        descripcion: paciente.descripcion,
+                        fechaNextCita: paciente.fechaNextCita,
+                        medicinas: paciente.medicinas
+                    }];
+                    listaHistoricos = historicoPaciente;
+                    cont++;
+                }
             }
         })
         if (cont == 0) {
@@ -26,29 +36,9 @@ function consultarDocumento() {
         }
     }
 
-    return historicoPaciente;
+    return listaHistoricos;
 }
 
-
-function llenarTabla() {
-    if (consultarDocumento() != nul) {
-
-
-    }
-    let listaUsers = JSON.parse(localStorage.getItem("Pacientes"));
-    console.log(listaUsers)
-    listaUsers.forEach(function (userLogin) {
-        document.getElementById("cedula").textContent = userLogin.nombre;
-        document.getElementById("nombre").textContent = userLogin.apellido;
-        document.getElementById("apellido").textContent = userLogin.cargo;
-        document.getElementById("correo").textContent = userLogin.cargo;
-        document.getElementById("genero").textContent = userLogin.cargo;
-        document.getElementById("fechaNextCita").textContent = userLogin.cargo;
-        document.getElementById("descripcion").textContent = userLogin.cargo;
-        document.getElementById("medicinas").textContent = userLogin.cargo;
-        console.log(userLogin)
-    })
-}
 
 function mostrarTabla() {
 
@@ -59,29 +49,17 @@ function mostrarTabla() {
     for (let i = 0; i < listaUsers.length; i++) {
 
         let fila = document.createElement('tr'),
-            nombre = document.createElement('td'),
-            apellido = document.createElement('td'),
-            correo = document.createElement('td'),
-            genero = document.createElement('td'),
+            idAtencion = document.createElement('td'),
             descripcion = document.createElement('td'),
             medicinas = document.createElement('td'),
             fechaNextCita = document.createElement('td');
 
-        nombre.innerHTML = listaUsers[i].nombre;
-        apellido.innerHTML = listaUsers[i].apellido;
-        correo.innerHTML = listaUsers[i].correo;
-        genero.innerHTML = listaUsers[i].genero;
+        idAtencion.innerHTML = listaUsers[i].idAtencion;
         descripcion.innerHTML = listaUsers[i].descripcion;
         medicinas.innerHTML = listaUsers[i].medicinas;
         fechaNextCita.innerHTML = listaUsers[i].fechaNextCita;
 
-
-
-
-        fila.appendChild(nombre);
-        fila.appendChild(apellido);
-        fila.appendChild(correo);
-        fila.appendChild(genero);
+        fila.appendChild(idAtencion);
         fila.appendChild(descripcion);
         fila.appendChild(medicinas);
         fila.appendChild(fechaNextCita);

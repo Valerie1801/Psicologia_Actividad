@@ -64,16 +64,16 @@
                             <a class="nav-link text-light" href="registro_Pac.html">REGISTRO PACIENTES</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link text-light" href="Atencion_Pacientes.html">ATENCION PACIENTES</a>
+                            <a class="nav-link text-light" href="Atencion_Pacientes.html    ">ATENCION PACIENTES</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link text-light" href="H_paciente.html">HISTORICO PACIENTE</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav ml-auto">                       
-                            <input id="closeLogin" type="submit" form="closeLogin" value="CERRAR SESION"
-                                class="btn btn-outline-light my-2 my-sm-0" onclick="closeLogin()">                  
+                    <ul class="navbar-nav ml-auto">
+                        <input id="closeLogin" type="submit" form="closeLogin" value="CERRAR SESION"
+                            class="btn btn-outline-light my-2 my-sm-0" onclick="closeLogin()">
                     </ul>
 
                 </div>
@@ -85,11 +85,6 @@
         <br>
 
         <div class="container">
-
-            <!--INICIO CONTENIDO-->
-
-
-            <!--FORMULARIO DE INFORMACION PACIENTES-->
 
             <div class="form-group" id="formulario">
                 <div class="card border-info">
@@ -111,30 +106,22 @@
                                 <input type="text" class="form-control" id="apellido" required><br>
 
                                 <label class="h6">Correo electrónico</label>
-                                <input type="text" class="form-control"id="correo" required><br>
+                                <input type="text" class="form-control" id="correo" required><br>
 
                                 <label class="h6">Género</label>
-                                    <select class="form-control" id="genero" required>
-                            
-                                        <option>Seleccione Tipo de Genero</option>
-                                        <option>Masculino</option>
-                                        <option>Femenino</option>
-                                    </select> <br>
+                                <select class="form-control" id="genero" required>
 
-                                <label class="h6">Fecha próxima cita</label>
-                                <input type="date"class="form-control" id="fechaNextCita" required><br>
+                                    <option>Seleccione Tipo de Genero</option>
+                                    <option>Masculino</option>
+                                    <option>Femenino</option>
+                                </select> <br>    
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                                <label class="h6">Descripcion historial</label>
-                                <textarea type="text" class="form-control" id="descripcion" rows="3" required></textarea><br>
+                                    <input type="submit" value="Registrar Paciente"
+                                        class="btn btn-outline-info my-2 my-sm-0">
 
-                                <label class="h6">Receta medicinas</label>
-                                <textarea type="text" class="form-control" id="medicinas" rows="3" required></textarea><br>
-                                 
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
 
-                                <input type="submit" value="Registrar Paciente"
-                                    class="btn btn-outline-info my-2 my-sm-0">
-                               
+                                </div>
 
                             </div>
 
@@ -143,27 +130,25 @@
                     </div>
 
                 </div>
+                <!--FIN FORMULARIO DE SOLICITUD-->
 
+                <!--FIN CONTENIDO-->
             </div>
-            <!--FIN FORMULARIO DE SOLICITUD-->
 
-            <!--FIN CONTENIDO-->
-        </div>
+            <!-- Footer -->
 
-        <!-- Footer -->
+            <footer class="bg-info" style="margin-top: 1rem; padding: 1rem 0" id="pie_pagina">
+                <span class="text-light  text-center font-Arial Black" style="display: block">
 
-        <footer class="bg-info" style="margin-top: 1rem; padding: 1rem 0" id="pie_pagina">
-            <span class="text-light  text-center font-Arial Black" style="display: block">
+                    Cra. 45 #48-31, Barranquilla
+                </span>
+                <span class="text-light text-center" style="display: block">
+                    servicioalcliente@psicologosbq.com
+                </span>
+                <span class="text-light text-center" style="display: block">Tel: 3458762 - Cel: 3009872346</span>
+            </footer>
 
-                Cra. 45 #48-31, Barranquilla
-            </span>
-            <span class="text-light text-center" style="display: block">
-                servicioalcliente@psicologosbq.com
-            </span>
-            <span class="text-light text-center" style="display: block">Tel: 3458762 - Cel: 3009872346</span>
-        </footer>
-
-        <!-- Footer -->
+            <!-- Footer -->
 
 
     </form>
