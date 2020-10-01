@@ -2,7 +2,7 @@
 
 //const { event } = require("jquery");
 import { closeLogin } from './CerrarSesion.js'
-import {mostrarNombre} from './NombreLogin.js'
+import { mostrarNombre } from './NombreLogin.js'
 
 function AddPersonal() {
 
@@ -12,6 +12,14 @@ function AddPersonal() {
     let txtcargo = document.getElementById("cargo").value;
     let txtcorreo = document.getElementById("correo").value;
     let txtGenero = document.getElementById("genero").value;
+    let tipoUser;
+    if (txtcargo == "Psicologo") {
+        tipoUser = "medico";
+    } else if (txtcargo == "Sistemas") {
+        tipoUser = "admin";
+    } else {
+        tipoUser = "auxiliar";
+    }
 
     console.log(txtGenero);
     let newPersonal = {
@@ -21,7 +29,7 @@ function AddPersonal() {
         correo: txtcorreo,
         cargo: txtcargo,
         genero: txtGenero,
-        tipoUsuario: "medico",
+        tipoUsuario: tipoUser,
         password: "1234"
     }
 

@@ -9,15 +9,20 @@ function ValidarLogin() {
         if (userLogin.correo == usuariomail && userLogin.password == password) {
             console.log("El usuario es de Tipo " + userLogin.tipoUsuario + userLogin.correo);
             if (userLogin.tipoUsuario == 'admin') {
-                document.location.href = "registro_Per.html";                
+                document.location.href = "registro_Per.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
-                addLoginName(userLogin.nombre,userLogin.apellido,userLogin.genero);
+                addLoginName(userLogin.nombre, userLogin.apellido, userLogin.genero, userLogin.tipoUsuario);
 
                 cont += 1;
             } else if (userLogin.tipoUsuario == 'medico') {
                 document.location.href = "registro_Pac.html";
                 alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
-                addLoginName(userLogin.nombre,userLogin.apellido,userLogin.genero);
+                addLoginName(userLogin.nombre, userLogin.apellido, userLogin.genero, userLogin.tipoUsuario);
+                cont += 1;
+            } else {
+                document.location.href = "index.html";
+                alert("Bienvenido Sr(a) " + userLogin.nombre + "" + userLogin.apellido);
+                addLoginName(userLogin.nombre, userLogin.apellido, userLogin.genero, userLogin.tipoUsuario);
                 cont += 1;
             }
         }
@@ -28,11 +33,13 @@ function ValidarLogin() {
 }
 
 
-function addLoginName(loginName,loginLastName,loginGenero){
-    let usuarioLogin =[{
+function addLoginName(loginName, loginLastName, loginGenero, loginTipo) {
+    let usuarioLogin = [{
         nombreUsuario: loginName,
         apellidoUsuario: loginLastName,
-        generoUsuario: loginGenero
+        generoUsuario: loginGenero,
+        tipoUsuario: loginTipo
+
     }]
     localStorage.setItem("login", JSON.stringify(usuarioLogin));
 }

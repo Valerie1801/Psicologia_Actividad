@@ -9,14 +9,21 @@ function AddPacientes() {
     let txtapellido = document.getElementById("apellido").value;
     let txtcorreo = document.getElementById("correo").value;
     let txtGenero = document.getElementById("genero").value;
+    let txtNextCita = document.getElementById("fechaNextCita").value;
+    let txtDescripcion = document.getElementById("descripcion").value;
+    let txtMedicinas = document.getElementById("medicinas").value;
 
     let newPaciente = {
         cedula: txtcedula,
         nombre: txtnombre,
         apellido: txtapellido,
         correo: txtcorreo,
-        genero: txtGenero
+        genero: txtGenero,
+        fechaNextCita: txtNextCita,
+        descripcion: txtDescripcion,
+        medicinas: txtMedicinas
     }
+
     let listaPacientes = JSON.parse(localStorage.getItem("Paciente"));
     //si el Array tiene algo lo validamos    
     if (listaPacientes != null) {
@@ -35,7 +42,10 @@ function AddPacientes() {
             nombre: txtnombre,
             apellido: txtapellido,
             correo: txtcorreo,
-            genero: txtGenero
+            genero: txtGenero,
+            fechaNextCita: txtNextCita,
+            descripcion: txtDescripcion,
+            medicinas: txtMedicinas
         }]
         //Si el array esta vacio, entonces ingresamos el primero           
         localStorage.setItem("Paciente", JSON.stringify(newPaciente));
@@ -62,8 +72,6 @@ function ValidarPacientes(listaPacientes, cedula) {
     return valor
 }
 
-
-console.log("Nofunciona nada");
 
 // ejecuciones
 

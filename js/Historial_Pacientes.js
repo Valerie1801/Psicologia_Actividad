@@ -1,21 +1,21 @@
-
-import { closeLogin } from './CerrarSesion.js'
-import { mostrarNombre } from './NombreLogin.js'
-
 function llenarTabla() {
-    let listaUsers = JSON.parse(localStorage.getItem("Usuario"));
-    let cont = 0;
+    let listaUsers = JSON.parse(localStorage.getItem("Pacientes"));   
     console.log(listaUsers)
     listaUsers.forEach(function (userLogin) {
-        document.getElementById("nombre").textContent = userLogin.nombre;
-        document.getElementById("apellido").textContent = userLogin.apellido;
-        document.getElementById("cargo").textContent = userLogin.cargo;
+        document.getElementById("cedula").textContent = userLogin.nombre;
+        document.getElementById("nombre").textContent = userLogin.apellido;
+        document.getElementById("apellido").textContent = userLogin.cargo;
+        document.getElementById("correo").textContent = userLogin.cargo;
+        document.getElementById("genero").textContent = userLogin.cargo;
+        document.getElementById("fechaNextCita").textContent = userLogin.cargo;
+        document.getElementById("descripcion").textContent = userLogin.cargo;
+        document.getElementById("medicinas").textContent = userLogin.cargo;
         console.log(userLogin)
     })
 }
 
 function mostrarTabla() {
-    let listaUsers = JSON.parse(localStorage.getItem("Usuario")),
+    let listaUsers = JSON.parse(localStorage.getItem("Pacientes")),
         tbody = document.querySelector('#tablaPersonal tbody');
 
     for (let i = 0; i < listaUsers.length; i++) {
@@ -38,11 +38,4 @@ function mostrarTabla() {
 }
 
 mostrarTabla();
-mostrarNombre();
 //llenarTabla();
-//ejecutar el evento Onsubmit del formulario para agregar personas ---------------     
-document.getElementById("closeLogin").onclick = function () {
-    console.log("Limpia el local Storage");
-    closeLogin();
-    event.preventDefault();
-};

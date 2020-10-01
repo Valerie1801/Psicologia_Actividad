@@ -1,3 +1,4 @@
+import { mostrarNombre } from './NombreLogin.js'
 class UsersAdmin {
     constructor(cedula, nombre, apellido, correo, cargo, tipoUsuario, password) {
 
@@ -71,3 +72,4 @@ function ValidarEmpleado(listaUsers, cedula) {
     }
     return valor
 }
+mostrarNombre();
